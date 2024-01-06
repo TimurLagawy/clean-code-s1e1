@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.body {
     background-color: #f8f8f8;
     color: #333;
     font-family: Lato, sans-serif;
@@ -12,7 +12,7 @@ body {
     text-align: right;
 }
 
-.header img {
+.header-matrix {
     width: 100%;
 }
 
@@ -41,7 +41,7 @@ body {
     display: flex;
 }
 
-ul {
+.main-tasks {
     margin: 0;
     padding: 0px;
 }
@@ -51,12 +51,17 @@ h3 {
     list-style: none;
 }
 
+
 input,
-button{
+.main-add__button,
+.edit,
+.delete{
     outline: none;
 }
 
-button {
+.main-add__button,
+.edit,
+.delete {
     background: none;
     border: 0px;
     color: #888;
@@ -66,7 +71,9 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.main-add__button,
+.edit,
+.delete:hover {
     color: #3a3a3a;
 }
 
@@ -138,32 +145,36 @@ li >    input[type="text"] {
     width: 226px;
 }
 
-button.delete img {
+.main-add__button,
+.edit,
+.delete.delete img {
     height: 2em;
     transform: rotateZ(45deg);
     transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.main-add__button,
+.edit,
+.delete.delete img:hover {
     transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks label {
+.main-tasks#completed-tasks label {
     text-decoration: line-through;
     color: #888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
+.main-tasks li input[type=text] {
     display: none;
 }
 
-ul li.edit-mode input[type=text] {
+.main-tasks li.edit-mode input[type=text] {
     display: inline-block;
     width: 224px;
 }
 
-ul li.edit-mode label {
+.main-tasks li.edit-mode label {
     display: none;
 }
